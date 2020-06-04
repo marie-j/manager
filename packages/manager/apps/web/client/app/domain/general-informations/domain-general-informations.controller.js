@@ -29,6 +29,7 @@ export default class DomainTabGeneralInformationsCtrl {
     $translate,
     Alerter,
     constants,
+    dnsAvailableOptions,
     Domain,
     enableWebhostingLink,
     Hosting,
@@ -51,6 +52,7 @@ export default class DomainTabGeneralInformationsCtrl {
     this.$translate = $translate;
     this.Alerter = Alerter;
     this.WucAllDom = WucAllDom;
+    this.dnsAvailableOptions = dnsAvailableOptions;
     this.Domain = Domain;
     this.enableWebhostingLink = enableWebhostingLink;
     this.Hosting = Hosting;
