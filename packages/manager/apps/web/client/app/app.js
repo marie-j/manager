@@ -537,26 +537,26 @@ angular
     partners: 'https://www.ovh.com/manager/partners/',
     labs: 'https://www.ovh.com/manager/sunrise/uxlabs/#!/',
   })
-  .run(
-    /* @ngInject */ ($state) => {
-      $state.defaultErrorHandler((error) => {
-        if (error.type === RejectType.ERROR) {
-          $state.go(
-            'error',
-            {
-              detail: {
-                message: get(error.detail, 'data.message'),
-                code: has(error.detail, 'headers')
-                  ? error.detail.headers('x-ovh-queryId')
-                  : null,
-              },
-            },
-            { location: false },
-          );
-        }
-      });
-    },
-  )
+  // .run(
+  //   /* @ngInject */ ($state) => {
+  //     $state.defaultErrorHandler((error) => {
+  //       if (error.type === RejectType.ERROR) {
+  //         $state.go(
+  //           'error',
+  //           {
+  //             detail: {
+  //               message: get(error.detail, 'data.message'),
+  //               code: has(error.detail, 'headers')
+  //                 ? error.detail.headers('x-ovh-queryId')
+  //                 : null,
+  //             },
+  //           },
+  //           { location: false },
+  //         );
+  //       }
+  //     });
+  //   },
+  // )
   .run(/* @ngTranslationsInject:json ./translations */)
   .run(
     /* @ngInject */ ($rootScope, $transitions) => {
