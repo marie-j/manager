@@ -1,0 +1,2 @@
+universe-web-cloud:
+  - packages/manager/apps/web/**
